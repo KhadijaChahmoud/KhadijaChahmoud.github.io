@@ -260,20 +260,21 @@ a { color: inherit; }
   .github-link { display: none; }
   .brand-label { font-size: 0.68rem; }
   .page-main { padding: 0 1rem 1rem; }
-  .hero-section { height: calc(100dvh - var(--header-total-height) - var(--footer-total-height)); min-height: 0; padding: 1rem 0; }
-  .hero-content { width: 100%; height: auto; max-height: none; margin: 0 auto; padding: 1rem; overflow: visible; }
-  .hero-content > .eyebrow { margin-top: 0; margin-bottom: 0.5rem; }
-  .hero-heading-row { flex-direction: row; align-items: flex-end; justify-content: flex-start; gap: 0.75rem; text-align: left; }
-  .hero-heading-row h1 { margin: 0; }
-  .hero-avatar { order: -1; width: clamp(5rem, 22vw, 6rem); height: clamp(5rem, 22vw, 6rem); }
+  .hero-section { height: auto; min-height: 0; align-items: flex-start; padding: 0.75rem 0 1rem; }
+  .hero-content { display: flex; width: 100%; height: auto; max-height: none; flex-direction: column; align-items: center; margin: 0 auto; padding: 1rem; overflow: visible; }
+  .hero-content > .eyebrow { order: 1; width: 100%; margin-top: 0; margin-bottom: 0.5rem; }
+  .hero-heading-row { display: contents; }
+  .hero-heading-row h1 { order: 2; width: 100%; flex: none; margin: 0; text-align: center; }
+  .hero-avatar-button { order: 0; align-self: center; margin-bottom: 0.75rem; }
+  .hero-avatar { width: clamp(5rem, 22vw, 6rem); height: clamp(5rem, 22vw, 6rem); }
   .hero-content h1 { margin: 0; font-size: clamp(1.3rem, 5.8vw, 1.9rem); line-height: 1.06; }
   .hero-content h1 { overflow-wrap: anywhere; }
   .hero-content h1 > span:first-child { font-size: inherit; }
-  .hero-subtitle { font-size: 0.9rem; font-style: italic; font-weight: 700; line-height: 1.55; }
-  .hero-actions { flex-direction: column; align-items: stretch; max-width: 18rem; margin-top: 1.25rem; margin-right: auto; margin-left: auto; }
+  .hero-subtitle { order: 3; width: 100%; font-size: 0.9rem; font-style: italic; font-weight: 700; line-height: 1.55; }
+  .hero-actions { order: 4; width: 100%; flex-direction: column; align-items: stretch; max-width: 18rem; margin-top: 1.25rem; margin-right: auto; margin-left: auto; }
   .hero-actions > .primary-button, .hero-actions > .secondary-button, .hero-actions > .follow-action { width: 100%; }
   .hero-actions > .follow-action .secondary-button { width: 100%; }
-  .hero-caption { margin-top: 1rem; font-style: italic; font-weight: 700; }
+  .hero-caption { order: 5; width: 100%; margin-top: 1rem; font-style: italic; font-weight: 700; }
   .follow-click-note { font-style: italic; font-weight: 700; }
   .feature-grid { grid-template-columns: 1fr; }
   .feature-card { min-height: 0; }
