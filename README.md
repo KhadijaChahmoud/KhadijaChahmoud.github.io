@@ -1,63 +1,159 @@
-# Khadija Chahmoud · @eco
+# KHADIJA CHAHMOUD
+### Content Creation · Social Media Management · Creative Storytelling
 
-**Real stories. Genuine connection. Meaningful content.**
+<p align="center">
+  <img src="https://img.shields.io/badge/DUBAI-UAE-111111?style=flat-square" />
+  <img src="https://img.shields.io/badge/CASABLANCA-MOROCCO-111111?style=flat-square" />
+  <img src="https://img.shields.io/badge/CREATIVE-REAL%20%26%20HUMAN-111111?style=flat-square" />
+</p>
 
-Khadija Chahmoud is a creative professional focused on content creation, social media management, and human-first brand storytelling. Her perspective connects Dubai, UAE and Casablanca, Morocco.
+<p align="center">
+  <strong>Real, raw, & human content for your brand.</strong>
+</p>
 
-- Instagram: [@khadija.chahmoud](https://www.instagram.com/khadija.chahmoud/)
-- GitHub: [KhadijaChahmoud](https://github.com/KhadijaChahmoud)
-- Website: [khadijachahmoud.github.io](https://khadijachahmoud.github.io/)
+<p align="center">
+  <a href="https://www.instagram.com/khadija.chahmoud/">Instagram</a> ·
+  <a href="https://khadijachahmoud.github.io/">Website</a> ·
+  <a href="https://github.com/KhadijaChahmoud">GitHub</a>
+</p>
 
-This site uses the @eco ecosystem architecture and retains the original MIT license and attribution. See [LICENSE](./LICENSE).
+---
 
-## Pages
+## ✨ Welcome to my creative world
 
-| Page | URL |
+I'm Khadija Chahmoud.
+
+I believe that every brand has a story worth telling, every business has a personality worth discovering, and every meaningful connection starts with authenticity.
+
+My focus is content creation and social media management, bringing together creativity, communication, and human storytelling to help brands express who they really are.
+
+I believe content should do more than fill a social media feed.
+
+It should communicate a feeling, create recognition, build trust, and give people a reason to connect with a brand.
+
+**Real stories. Genuine connections. Meaningful content.**
+
+---
+
+## 🌍 My journey
+
+Returning from Dubai to Morocco gave me an opportunity to reconnect with my roots and explore a new professional direction.
+
+I wanted to bring my ambitions closer to home and work with people from my own country.
+
+I believe Morocco has incredible creative potential, talented people, ambitious entrepreneurs, and businesses with stories waiting to be shared.
+
+My vision is to connect creativity, people, and opportunities across different markets, with a presence between:
+
+**Dubai, United Arab Emirates 🇦🇪**
+
+**Casablanca, Morocco 🇲🇦**
+
+Different perspectives, connected by one creative ambition.
+
+---
+
+## 🎬 What I do
+
+My professional focus is built around two main areas.
+
+### 01 — Content Creation
+
+Creating authentic content that communicates a brand's identity and connects with its audience.
+
+- Creative content concepts
+- Brand storytelling
+- Visual communication
+- Content planning
+- Digital brand presence
+
+### 02 — Social Media Management
+
+Helping brands develop a consistent and recognizable presence across social media.
+
+- Social media content planning
+- Brand communication
+- Content organization
+- Audience engagement strategy
+- Digital presence development
+
+*Specific services and project requirements are discussed individually.*
+
+---
+
+## 💡 My creative philosophy
+
+I believe the strongest brands aren't necessarily the loudest.
+
+They're the ones people remember.
+
+The ones that communicate honestly, understand their audience, and create experiences that feel human.
+
+My approach is guided by five principles:
+
+| Principle | What it means |
 |---|---|
-| Home | <https://khadijachahmoud.github.io/> |
-| About | <https://khadijachahmoud.github.io/about.html> |
-| Work timeline | <https://khadijachahmoud.github.io/timeline.html> |
-| Protected users | <https://khadijachahmoud.github.io/protectedUSERS_root_path_secure/> |
+| Authenticity | Be real, not artificial |
+| Creativity | Give every idea room to grow |
+| Connection | Put people before numbers |
+| Consistency | Build recognition over time |
+| Purpose | Create content with meaning |
 
-## Architecture
+**I don't believe in creating content just to post something. I believe in creating content with a reason to exist.**
 
-The site keeps the same React/Vite multi-page architecture and @eco features: responsive sidebars, theme preferences, star-field background, music library, timeline and language showcase, plus a protected-users page backed by a Prisma API.
+---
 
-GitHub Pages serves the frontend only. The Node API handles GitHub OAuth and stores profile/session data through Prisma. MongoDB is the default provider; PostgreSQL remains supported. The first successful GitHub sign-in creates a user in `protected_users`; hashed sessions are stored in `protected_user_sessions`.
+## 🤝 Let's create something meaningful
 
-## Local development
+Whether you're building a new brand, developing an existing business, or looking for a more authentic way to communicate with your audience, I'd love to discover what we could create together.
 
-1. Install frontend dependencies with `npm ci`.
-2. Copy `api/.env.example` to `api/.env`. Set `DATABASE_URL` to your MongoDB connection string and configure the GitHub OAuth client ID, secret, callback, frontend URL, and allowed origin. The local callback is `http://localhost:8787/auth/github/callback`.
-3. Install API dependencies with `npm --prefix api ci`, then create the MongoDB collections and indexes with `npm --prefix api run db:push:mongodb`.
-4. Start the API with `npm --prefix api run dev`.
-5. Copy `.env.example` to `.env.local`, set `VITE_API_BASE_URL=http://localhost:8787`, and start the frontend with `npm run dev`.
+I believe the best collaborations begin with a conversation, an exchange of ideas, and a shared desire to create something valuable.
 
-Configure the GitHub OAuth App callback URL to exactly match `GITHUB_CALLBACK_URL`. For production, set `VITE_API_BASE_URL` as a GitHub Actions variable and keep database credentials and the OAuth secret only on the API host.
+Let's turn ideas into stories and stories into meaningful connections.
 
-See [api/README.md](./api/README.md) for deployment steps, PostgreSQL migration instructions, and how to inspect user records in MongoDB Atlas.
+---
 
-## Language starters
+## 📍 Based between two worlds
 
-<!-- language-metrics:start -->
-| Language | Equal starter share | Measured source share | Files | File types | Starter |
-|----------|---------------------|-----------------------|-------|------------|---------|
-| 🦀 Rust | 12.5% | 2.2% | 1 | `.rs` | [Open](./starters/rust/README.md) |
-| 🐹 Go | 12.5% | 1.9% | 2 | `.go` | [Open](./starters/go/README.md) |
-| 🐍 Python | 12.5% | 4.5% | 4 | `.py` | [Open](./starters/python/README.md) |
-| 🔷 TypeScript | 12.5% | 65.0% | 21 | `.ts, .tsx` | [Open](./starters/typescript/README.md) |
-| ⚡ JavaScript | 12.5% | 1.9% | 4 | `.js, .mjs, .cjs` | [Open](./starters/javascript/README.md) |
-| 🗃️ SQL | 12.5% | 1.6% | 5 | `.sql` | [Open](./starters/sql/README.md) |
-| 🎨 CSS | 12.5% | 21.4% | 3 | `.css` | [Open](./starters/css/README.md) |
-| 🌐 HTML | 12.5% | 1.5% | 2 | `.html, .htm` | [Open](./starters/html/README.md) |
-<!-- language-metrics:end -->
+<details>
+<summary>🇦🇪 Dubai, United Arab Emirates</summary>
 
-## Build and tests
+A place for international perspectives, creativity, ambition, and new opportunities.
 
-```sh
-npm run build
-npm --prefix api run build
-npm --prefix api test
-```
+</details>
 
-Language metrics are regenerated before frontend development and production builds. The project is MIT-licensed; see [LICENSE](./LICENSE) for notices and terms.
+<details>
+<summary>🇲🇦 Casablanca, Morocco</summary>
+
+A connection to home, Moroccan talent, local businesses, and creative opportunities.
+
+</details>
+
+---
+
+## 📲 Connect with me
+
+<p align="center">
+  <a href="https://www.instagram.com/khadija.chahmoud/">
+    <img src="https://img.shields.io/badge/INSTAGRAM-FOLLOW%20MY%20JOURNEY-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
+  </a>
+  <a href="https://github.com/KhadijaChahmoud">
+    <img src="https://img.shields.io/badge/GITHUB-EXPLORE%20MY%20SPACE-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+</p>
+
+<p align="center">
+  <strong>Have an idea? Let's talk.</strong>
+</p>
+
+<p align="center">
+  Dubai 🇦🇪 · Casablanca 🇲🇦
+</p>
+
+---
+
+<p align="center">
+  <em>Real, raw, & human.</em>
+  <br/>
+  <strong>© Khadija Chahmoud. All rights reserved.</strong>
+</p>
