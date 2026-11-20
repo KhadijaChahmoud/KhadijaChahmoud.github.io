@@ -1,6 +1,6 @@
 {
   "method": "first-party source file bytes",
-  "totalSourceBytes": 139499,
+  "totalSourceBytes": 139621,
   "languages": [
     {
       "name": "Rust",
@@ -16,7 +16,7 @@
       "extension": ".go",
       "starterDirectory": "starters/go",
       "fileCount": 2,
-      "sourceBytes": 2599,
+      "sourceBytes": 2721,
       "actualPercent": 1.9,
       "equalPercent": 12.5
     },
@@ -35,7 +35,7 @@
       "starterDirectory": "starters/typescript",
       "fileCount": 20,
       "sourceBytes": 90262,
-      "actualPercent": 64.7,
+      "actualPercent": 64.6,
       "equalPercent": 12.5
     },
     {
@@ -44,7 +44,7 @@
       "starterDirectory": "starters/javascript",
       "fileCount": 4,
       "sourceBytes": 2724,
-      "actualPercent": 1.9,
+      "actualPercent": 2,
       "equalPercent": 12.5
     },
     {
