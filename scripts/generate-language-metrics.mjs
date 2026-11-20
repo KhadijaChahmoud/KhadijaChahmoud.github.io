@@ -123,11 +123,11 @@ const start = readme.indexOf(startMarker);
 const contentStart = start + startMarker.length;
 const end = readme.indexOf(endMarker, contentStart);
 if (start < 0 || end < 0) {
-  throw new Error('README language-metrics markers are missing.');
+  console.log('README language-metrics markers are missing; leaving README unchanged.');
+} else {
+  const generatedTable = `${startMarker}\n${table.join('\n')}\n${endMarker}`;
+  const updatedReadme = `${readme.slice(0, start)}${generatedTable}${readme.slice(end + endMarker.length)}`;
+  if (updatedReadme !== readme) await writeFile(readmePath, updatedReadme, 'utf8');
 }
-
-const generatedTable = `${startMarker}\n${table.join('\n')}\n${endMarker}`;
-const updatedReadme = `${readme.slice(0, start)}${generatedTable}${readme.slice(end + endMarker.length)}`;
-if (updatedReadme !== readme) await writeFile(readmePath, updatedReadme, 'utf8');
 
 console.log(`Generated source-language metrics for ${languages.length} languages at ${path.relative(projectRoot, outputPath)}.`);

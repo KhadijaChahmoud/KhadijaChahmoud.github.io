@@ -1,93 +1,159 @@
-# 🌸 Khadija Chahmoud
-
-### ✨ Entrepreneur · Content Creator · Digital Storyteller
+# KHADIJA CHAHMOUD
+### Content Creation · Social Media Management · Creative Storytelling
 
 <p align="center">
-  <img src="https://img.shields.io/badge/CREATIVITY-FFB6C1?style=for-the-badge&logo=canva&logoColor=white" />
-  <img src="https://img.shields.io/badge/STORYTELLING-E8B4B8?style=for-the-badge&logo=instagram&logoColor=white" />
-  <img src="https://img.shields.io/badge/DIGITAL%20STRATEGY-C9A7EB?style=for-the-badge&logo=googleanalytics&logoColor=white" />
-  <img src="https://img.shields.io/badge/MOROCCO%20%F0%9F%87%B2%F0%9F%87%A6-DUBAI%20%F0%9F%87%A6%F0%9F%87%AA-F5C6AA?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/DUBAI-UAE-111111?style=flat-square" />
+  <img src="https://img.shields.io/badge/CASABLANCA-MOROCCO-111111?style=flat-square" />
+  <img src="https://img.shields.io/badge/CREATIVE-REAL%20%26%20HUMAN-111111?style=flat-square" />
 </p>
 
 <p align="center">
-  <em>Creative thinking. Authentic stories. Meaningful digital experiences.</em>
+  <strong>Real, raw, & human content for your brand.</strong>
+</p>
+
+<p align="center">
+  <a href="https://www.instagram.com/khadija.chahmoud/">Instagram</a> ·
+  <a href="https://khadijachahmoud.github.io/">Website</a> ·
+  <a href="https://github.com/KhadijaChahmoud">GitHub</a>
 </p>
 
 ---
 
-## 💖 About
+## ✨ Welcome to my creative world
 
-Welcome to the professional portfolio of **Khadija Chahmoud** — an entrepreneur and content creator with an interest in digital communication, creative storytelling, and building meaningful brand experiences.
+I'm Khadija Chahmoud.
 
-As the founder of **Brandy Socials**, Khadija brings together creativity and digital strategy to help shape how brands communicate and connect with their audiences.
+I believe that every brand has a story worth telling, every business has a personality worth discovering, and every meaningful connection starts with authenticity.
 
-Her professional journey connects the energy of **Dubai 🇦🇪** with her roots in **Morocco 🇲🇦**.
+My focus is content creation and social media management, bringing together creativity, communication, and human storytelling to help brands express who they really are.
 
-## 🎨 Professional Identity
+I believe content should do more than fill a social media feed.
 
-| ✨ Area | 🌷 Focus |
+It should communicate a feeling, create recognition, build trust, and give people a reason to connect with a brand.
+
+**Real stories. Genuine connections. Meaningful content.**
+
+---
+
+## 🌍 My journey
+
+Returning from Dubai to Morocco gave me an opportunity to reconnect with my roots and explore a new professional direction.
+
+I wanted to bring my ambitions closer to home and work with people from my own country.
+
+I believe Morocco has incredible creative potential, talented people, ambitious entrepreneurs, and businesses with stories waiting to be shared.
+
+My vision is to connect creativity, people, and opportunities across different markets, with a presence between:
+
+**Dubai, United Arab Emirates 🇦🇪**
+
+**Casablanca, Morocco 🇲🇦**
+
+Different perspectives, connected by one creative ambition.
+
+---
+
+## 🎬 What I do
+
+My professional focus is built around two main areas.
+
+### 01 — Content Creation
+
+Creating authentic content that communicates a brand's identity and connects with its audience.
+
+- Creative content concepts
+- Brand storytelling
+- Visual communication
+- Content planning
+- Digital brand presence
+
+### 02 — Social Media Management
+
+Helping brands develop a consistent and recognizable presence across social media.
+
+- Social media content planning
+- Brand communication
+- Content organization
+- Audience engagement strategy
+- Digital presence development
+
+*Specific services and project requirements are discussed individually.*
+
+---
+
+## 💡 My creative philosophy
+
+I believe the strongest brands aren't necessarily the loudest.
+
+They're the ones people remember.
+
+The ones that communicate honestly, understand their audience, and create experiences that feel human.
+
+My approach is guided by five principles:
+
+| Principle | What it means |
 |---|---|
-| 🎥 Content Creation | Visual communication and creative content |
-| 📱 Social Media | Digital presence and audience engagement |
-| 🧠 Brand Strategy | Brand positioning and communication |
-| ✍️ Storytelling | Human-centered narratives |
-| 💡 Entrepreneurship | Creative ideas and business development |
-| 🎬 Campaigns & Events | Digital communication and event coverage |
+| Authenticity | Be real, not artificial |
+| Creativity | Give every idea room to grow |
+| Connection | Put people before numbers |
+| Consistency | Build recognition over time |
+| Purpose | Create content with meaning |
 
-*These are professional areas represented in her public profile and work history, not a promise that every service is currently available.*
+**I don't believe in creating content just to post something. I believe in creating content with a reason to exist.**
 
-## 🚀 Professional Journey
+---
 
-- 🌸 Entrepreneur and content creator.
-- 💼 Founder of **Brandy Socials**, as listed on her public professional profile.
-- 🌍 Experience contributing to digital communication and major event-related projects in the UAE.
-- 🎯 Interested in the relationship between creative content, brand identity, and audience connection.
-- 🇲🇦 Connected to Morocco and the international creative environment.
+## 🤝 Let's create something meaningful
 
-## 💎 Creative Philosophy
+Whether you're building a new brand, developing an existing business, or looking for a more authentic way to communicate with your audience, I'd love to discover what we could create together.
 
-> Great content is more than something people scroll past. It gives a brand a voice, creates a connection, and makes a story worth remembering.
+I believe the best collaborations begin with a conversation, an exchange of ideas, and a shared desire to create something valuable.
 
-A creative approach centered on:
+Let's turn ideas into stories and stories into meaningful connections.
 
-- 🤍 Authentic communication
-- 🎨 Visual identity and consistency
-- 📖 Human storytelling
-- 🌍 Cultural connection
-- ✨ Creativity with purpose
+---
 
-## 🛠️ Areas of Expertise
+## 📍 Based between two worlds
 
-<p>
-  <img src="https://img.shields.io/badge/Content%20Creation-FFB6C1?style=flat-square" />
-  <img src="https://img.shields.io/badge/Social%20Media-E8B4B8?style=flat-square" />
-  <img src="https://img.shields.io/badge/Digital%20Marketing-C9A7EB?style=flat-square" />
-  <img src="https://img.shields.io/badge/Brand%20Communication-F5C6AA?style=flat-square" />
-  <img src="https://img.shields.io/badge/Creative%20Strategy-D8C4E8?style=flat-square" />
-  <img src="https://img.shields.io/badge/Storytelling-F3AFC1?style=flat-square" />
-</p>
+<details>
+<summary>🇦🇪 Dubai, United Arab Emirates</summary>
 
-## 🌍 Dubai × Morocco
+A place for international perspectives, creativity, ambition, and new opportunities.
 
-Two places, different perspectives, and opportunities to connect people, ideas, and brands.
+</details>
 
-🇦🇪 Dubai · 🇲🇦 Casablanca · 🌍 International perspective
+<details>
+<summary>🇲🇦 Casablanca, Morocco</summary>
 
-## 📸 Discover & Connect
+A connection to home, Moroccan talent, local businesses, and creative opportunities.
+
+</details>
+
+---
+
+## 📲 Connect with me
 
 <p align="center">
   <a href="https://www.instagram.com/khadija.chahmoud/">
-    <img src="https://img.shields.io/badge/Instagram-Follow%20the%20Journey-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+    <img src="https://img.shields.io/badge/INSTAGRAM-FOLLOW%20MY%20JOURNEY-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
   </a>
-  <a href="https://www.linkedin.com/in/khadija-chahmoud">
-    <img src="https://img.shields.io/badge/LinkedIn-Professional%20Profile-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  <a href="https://github.com/KhadijaChahmoud">
+    <img src="https://img.shields.io/badge/GITHUB-EXPLORE%20MY%20SPACE-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
+</p>
+
+<p align="center">
+  <strong>Have an idea? Let's talk.</strong>
+</p>
+
+<p align="center">
+  Dubai 🇦🇪 · Casablanca 🇲🇦
 </p>
 
 ---
 
 <p align="center">
-  🌸 <strong>Creativity with purpose. Stories with meaning.</strong> 🌸
+  <em>Real, raw, & human.</em>
   <br/>
-  <sub>Personal professional portfolio · Khadija Chahmoud</sub>
+  <strong>© Khadija Chahmoud. All rights reserved.</strong>
 </p>
