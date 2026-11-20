@@ -35,15 +35,6 @@ const INSTAGRAM_URL = 'https://www.instagram.com/khadija.chahmoud/';
 const PROTECTED_USERS_URL = '/protectedUSERS_root_path_secure/';
 const SOURCE_URL = 'https://github.com/KhadijaChahmoud/KhadijaChahmoud.github.io';
 
-function readLayoutPreference(key: string, fallback: boolean) {
-  try {
-    const saved = window.localStorage.getItem(key);
-    return saved === null ? fallback : saved === 'true';
-  } catch {
-    return fallback;
-  }
-}
-
 function EcoHeader({
   leftOpen,
   rightOpen,
@@ -254,8 +245,8 @@ function EcoFooter() {
 }
 
 export default function App() {
-  const [leftOpen, setLeftOpen] = useState(() => readLayoutPreference('eco-starter:left-open', window.innerWidth > 900));
-  const [rightOpen, setRightOpen] = useState(() => readLayoutPreference('eco-starter:right-open', false));
+  const [leftOpen, setLeftOpen] = useState(false);
+  const [rightOpen, setRightOpen] = useState(false);
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     try {
       return window.localStorage.getItem('eco-starter:theme') === 'light' ? 'light' : 'dark';
@@ -291,12 +282,6 @@ export default function App() {
       } else if (event.key === 'Escape') {
         setLeftOpen(false);
         setRightOpen(false);
-        try {
-          window.localStorage.setItem('eco-starter:left-open', 'false');
-          window.localStorage.setItem('eco-starter:right-open', 'false');
-        } catch {
-          // Closing sidebars still works when storage is disabled.
-        }
       }
     };
     window.addEventListener('keydown', onKeyDown);
@@ -305,25 +290,11 @@ export default function App() {
 
   const toggleSidebar = (side: 'left' | 'right') => {
     const setter = side === 'left' ? setLeftOpen : setRightOpen;
-    const key = side === 'left' ? 'eco-starter:left-open' : 'eco-starter:right-open';
-    setter((open) => {
-      const next = !open;
-      try {
-        window.localStorage.setItem(key, String(next));
-      } catch {
-        // Sidebar state still updates for this visit when storage is disabled.
-      }
-      return next;
-    });
+    setter((open) => !open);
   };
 
   const closeSidebar = (side: 'left' | 'right') => {
     (side === 'left' ? setLeftOpen : setRightOpen)(false);
-    try {
-      window.localStorage.setItem(side === 'left' ? 'eco-starter:left-open' : 'eco-starter:right-open', 'false');
-    } catch {
-      // Closing the sidebar still works when storage is disabled.
-    }
   };
 
   return (
