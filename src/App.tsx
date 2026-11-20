@@ -142,12 +142,39 @@ function EcoRightSidebar({
 }
 
 function HomePage() {
+  const [isAvatarOpen, setIsAvatarOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isAvatarOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsAvatarOpen(false);
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isAvatarOpen]);
+
   return (
     <main id="main" className="page-main" tabIndex={-1}>
       <section className="hero-section">
         <div className="hero-content">
           <p className="eyebrow">CONTENT CREATION · SOCIAL MEDIA · BRAND STORYTELLING</p>
-          <h1>Hi, I’m <span>Khadija Chahmoud.</span><br />I make <span className="gradient-text">stories feel human.</span></h1>
+          <div className="hero-heading-row">
+            <h1>Hi, I’m <span>Khadija Chahmoud.</span><br />I make <span className="gradient-text">stories feel human.</span></h1>
+            <button
+              className="hero-avatar-button"
+              type="button"
+              onClick={() => setIsAvatarOpen(true)}
+              aria-label="Enlarge photo of Khadija Chahmoud"
+            >
+              <img
+                className="hero-avatar"
+                src="/assets/KHADIJACHAHMOUD.jpeg"
+                alt="Khadija Chahmoud"
+              />
+            </button>
+          </div>
           <p className="hero-subtitle">A creative home for thoughtful content, social media management, and brand storytelling. Based between Dubai and Casablanca.</p>
           <div className="hero-actions">
             <a className="primary-button" href="/about.html">Get to know me <ArrowUpRight size={16} /></a>
@@ -156,8 +183,29 @@ function HomePage() {
           </div>
           <p className="hero-caption">Real stories · genuine connection · meaningful content</p>
         </div>
-        <div className="hero-orbit" aria-hidden="true"><span /><span /><span /></div>
       </section>
+      {isAvatarOpen && (
+        <div
+          className="avatar-lightbox"
+          role="presentation"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) setIsAvatarOpen(false);
+          }}
+        >
+          <div className="avatar-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Khadija Chahmoud photo">
+            <button
+              className="avatar-lightbox-close"
+              type="button"
+              onClick={() => setIsAvatarOpen(false)}
+              aria-label="Close enlarged photo"
+              autoFocus
+            >
+              <X size={24} />
+            </button>
+            <img src="/assets/KHADIJACHAHMOUD.jpeg" alt="Khadija Chahmoud" />
+          </div>
+        </div>
+      )}
 
       <section className="content-section intro-section" id="ecosystem">
         <div className="section-heading"><span className="eyebrow">THE APPROACH</span><h2>People first. Stories with purpose.</h2><p>Every brand has a human story behind it. I help bring that story to life with thoughtful content, a clear voice, and a consistent social presence.</p></div>

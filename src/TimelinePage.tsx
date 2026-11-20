@@ -1,4 +1,5 @@
 import { portfolioVideos } from './lib/portfolioVideos';
+import PortfolioVideoCard from './components/PortfolioVideoCard';
 
 export default function TimelinePage() {
   return (
@@ -16,19 +17,7 @@ export default function TimelinePage() {
           <p>Explore all {portfolioVideos.length} videos from Khadija’s portfolio.</p>
         </div>
         <ol className="portfolio-video-grid">
-          {portfolioVideos.map((video) => (
-            <li className="portfolio-video-card" key={video.id}>
-              <div className="portfolio-video-copy">
-                <span className="eyebrow">{video.category}</span>
-                <h3>{video.title}</h3>
-                <p>{video.description}</p>
-              </div>
-              <video controls playsInline preload="metadata" aria-label={video.title}>
-                <source src={video.src} type="video/mp4" />
-                Your browser does not support embedded video. <a href={video.src}>Open the MP4 video.</a>
-              </video>
-            </li>
-          ))}
+          {portfolioVideos.map((video) => <PortfolioVideoCard video={video} key={video.id} />)}
         </ol>
       </section>
     </main>

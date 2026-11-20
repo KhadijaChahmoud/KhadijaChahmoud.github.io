@@ -1,4 +1,5 @@
 import { portfolioVideos } from '../lib/portfolioVideos';
+import PortfolioVideoCard from './PortfolioVideoCard';
 
 const featuredVideos = portfolioVideos.slice(0, 3);
 
@@ -11,19 +12,7 @@ export default function TimelineVideo() {
         <p>A few stories from Khadija’s work and life.</p>
       </div>
       <ol className="portfolio-video-grid homepage-video-grid">
-        {featuredVideos.map((video) => (
-          <li className="portfolio-video-card" key={video.id}>
-            <div className="portfolio-video-copy">
-              <span className="eyebrow">{video.category}</span>
-              <h3>{video.title}</h3>
-              <p>{video.description}</p>
-            </div>
-            <video controls playsInline preload="metadata" aria-label={video.title}>
-              <source src={video.src} type="video/mp4" />
-              Your browser does not support embedded video. <a href={video.src}>Open the MP4 video.</a>
-            </video>
-          </li>
-        ))}
+        {featuredVideos.map((video) => <PortfolioVideoCard video={video} key={video.id} />)}
       </ol>
       <a className="secondary-button timeline-all-videos" href="/timeline.html">
         See all videos in Khadija’s timeline
