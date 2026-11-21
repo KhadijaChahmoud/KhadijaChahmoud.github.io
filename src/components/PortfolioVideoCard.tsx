@@ -46,15 +46,8 @@ export default function PortfolioVideoCard({ video }: { video: PortfolioVideo })
     if (!element) return;
 
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        void element.play().catch((error: unknown) => {
-          if (error instanceof DOMException && error.name === 'AbortError') return;
-          console.warn('Muted autoplay was blocked for a portfolio video.', error);
-        });
-      } else {
-        element.pause();
-      }
-    }, { threshold: 0.35 });
+      if (!entry.isIntersecting) element.pause();
+    });
 
     observer.observe(element);
     return () => {
@@ -63,13 +56,24 @@ export default function PortfolioVideoCard({ video }: { video: PortfolioVideo })
     };
   }, []);
 
+  const playVideo = () => {
+    const element = videoRef.current;
+    if (!element || !element.paused) return;
+    void element.play().catch((error: unknown) => {
+      if (error instanceof DOMException && error.name === 'AbortError') return;
+      console.warn('Unable to play portfolio video on mouse hover.', error);
+    });
+  };
+
+  const pauseVideo = () => {
+    videoRef.current?.pause();
+  };
+
   const togglePlayback = () => {
     const element = videoRef.current;
     if (!element) return;
     if (element.paused) {
-      void element.play().catch((error: unknown) => {
-        console.error('Unable to play portfolio video.', error);
-      });
+      playVideo();
     } else {
       element.pause();
     }
@@ -77,7 +81,7 @@ export default function PortfolioVideoCard({ video }: { video: PortfolioVideo })
 
   return (
     <li className="portfolio-video-card">
-      <div className="portfolio-video-frame">
+      <div className="portfolio-video-frame" onMouseEnter={playVideo} onMouseLeave={pauseVideo}>
         <video
           ref={videoRef}
           muted={isMuted}

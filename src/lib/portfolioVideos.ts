@@ -6,7 +6,7 @@ export const portfolioVideos = [
     title: 'Brand power is belonging',
     category: 'Brand storytelling',
     description: 'A Brandy Socials reel about community and brand power.',
-    src: assetUrl('Brand power = belonging.Community is the real strategy.#brandysocials #marketingagencyindubai.mp4'),
+    src: assetUrl('brand-power-belonging.mp4'),
   },
   {
     id: 'maison-design',
