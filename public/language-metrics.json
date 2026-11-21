@@ -1,14 +1,14 @@
 {
   "method": "first-party source file bytes",
-  "totalSourceBytes": 143705,
+  "totalSourceBytes": 153731,
   "languages": [
     {
       "name": "Rust",
       "extension": ".rs",
       "starterDirectory": "starters/rust",
       "fileCount": 1,
-      "sourceBytes": 2932,
-      "actualPercent": 2.1,
+      "sourceBytes": 3042,
+      "actualPercent": 2,
       "equalPercent": 12.5
     },
     {
@@ -16,7 +16,7 @@
       "extension": ".go",
       "starterDirectory": "starters/go",
       "fileCount": 2,
-      "sourceBytes": 2599,
+      "sourceBytes": 2721,
       "actualPercent": 1.8,
       "equalPercent": 12.5
     },
@@ -25,8 +25,8 @@
       "extension": ".py",
       "starterDirectory": "starters/python",
       "fileCount": 4,
-      "sourceBytes": 6040,
-      "actualPercent": 4.2,
+      "sourceBytes": 6244,
+      "actualPercent": 4.1,
       "equalPercent": 12.5
     },
     {
@@ -34,8 +34,8 @@
       "extension": ".ts, .tsx",
       "starterDirectory": "starters/typescript",
       "fileCount": 22,
-      "sourceBytes": 92560,
-      "actualPercent": 64.4,
+      "sourceBytes": 97994,
+      "actualPercent": 63.7,
       "equalPercent": 12.5
     },
     {
@@ -43,7 +43,7 @@
       "extension": ".js, .mjs, .cjs",
       "starterDirectory": "starters/javascript",
       "fileCount": 4,
-      "sourceBytes": 2631,
+      "sourceBytes": 2724,
       "actualPercent": 1.8,
       "equalPercent": 12.5
     },
@@ -52,8 +52,8 @@
       "extension": ".sql",
       "starterDirectory": "starters/sql",
       "fileCount": 5,
-      "sourceBytes": 2153,
-      "actualPercent": 1.5,
+      "sourceBytes": 2224,
+      "actualPercent": 1.4,
       "equalPercent": 12.5
     },
     {
@@ -61,8 +61,8 @@
       "extension": ".css",
       "starterDirectory": "starters/css",
       "fileCount": 3,
-      "sourceBytes": 32729,
-      "actualPercent": 22.8,
+      "sourceBytes": 36661,
+      "actualPercent": 23.8,
       "equalPercent": 12.5
     },
     {
@@ -70,7 +70,7 @@
       "extension": ".html, .htm",
       "starterDirectory": "starters/html",
       "fileCount": 2,
-      "sourceBytes": 2061,
+      "sourceBytes": 2121,
       "actualPercent": 1.4,
       "equalPercent": 12.5
     }

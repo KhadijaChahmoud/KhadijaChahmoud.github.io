@@ -5,5 +5,5 @@ export interface PublicTrack {
   audioUrl: string;
 }
 
-// Add tracks you have permission to publish. These tracks are visible to every visitor.
+// Add tracks you have permission to publish. The footer player appears once this list is non-empty.
 export const PUBLIC_PLAYLIST: PublicTrack[] = [];

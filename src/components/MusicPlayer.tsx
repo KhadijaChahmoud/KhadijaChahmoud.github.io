@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Disc3, ListMusic, Music2, Pause, Play, Plus, SkipBack, SkipForward, Trash2, Upload, X } from 'lucide-react';
+import { Disc3, Music2, Pause, Play, Plus, Shuffle, SkipBack, SkipForward, Square, Trash2, Upload, Volume2, X } from 'lucide-react';
 import { PUBLIC_PLAYLIST } from '../music/playlist';
 import { addDeviceTracks, readDeviceTracks, removeDeviceTrack, type StoredDeviceTrack } from '../music/library';
 
@@ -69,6 +69,11 @@ function savePlayer(trackId: string, currentTime: number, wasPlaying: boolean) {
 }
 
 export default function MusicPlayer() {
+  if (!PUBLIC_PLAYLIST.length) return null;
+  return <ConfiguredMusicPlayer />;
+}
+
+function ConfiguredMusicPlayer() {
   const audio = useRef<HTMLAudioElement>(null);
   const fileInput = useRef<HTMLInputElement>(null);
   const restoredTime = useRef(0);
@@ -84,6 +89,8 @@ export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isReady, setIsReady] = useState(false);
   const [needsResume, setNeedsResume] = useState(false);
+  const [isShuffleEnabled, setIsShuffleEnabled] = useState(false);
+  const [volume, setVolume] = useState(1);
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [urlTitle, setUrlTitle] = useState('');
@@ -183,6 +190,16 @@ export default function MusicPlayer() {
       setMessage(error instanceof Error ? error.message : 'The selected track could not be saved.');
     }
   }, [tracks]);
+
+  const selectNextTrack = useCallback((continuePlaying = false) => {
+    if (!tracks.length) return;
+    let nextIndex = (activeIndex + 1) % tracks.length;
+    if (isShuffleEnabled && tracks.length > 1) {
+      const randomIndex = Math.floor(Math.random() * (tracks.length - 1));
+      nextIndex = randomIndex >= activeIndex ? randomIndex + 1 : randomIndex;
+    }
+    selectTrack(nextIndex, continuePlaying);
+  }, [activeIndex, isShuffleEnabled, selectTrack, tracks.length]);
 
   const play = useCallback(async () => {
     const element = audio.current;
@@ -324,6 +341,24 @@ export default function MusicPlayer() {
     void play();
   };
 
+  const stopPlayback = () => {
+    const element = audio.current;
+    if (!element) return;
+    playAfterLoad.current = false;
+    element.pause();
+    setIsPlaying(false);
+    setProgress(0);
+    setNeedsResume(false);
+    lastSavedSecond.current = -1;
+    try {
+      if (element.readyState > 0) element.currentTime = 0;
+      if (activeTrack) savePlayer(activeTrack.id, 0, false);
+      setMessage('');
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : 'Playback could not be stopped.');
+    }
+  };
+
   const onTimeUpdate = () => {
     const element = audio.current;
     if (!element || !activeTrack) return;
@@ -348,7 +383,7 @@ export default function MusicPlayer() {
         onPause={() => setIsPlaying(false)}
         onEnded={() => {
           setIsPlaying(false);
-          if (tracks.length > 1) selectTrack((activeIndex + 1) % tracks.length, true);
+          if (tracks.length > 1) selectNextTrack(true);
         }}
         onError={() => {
           if (activeTrack) setMessage(`Could not load “${activeTrack.title}”. Check the audio URL or file.`);
@@ -397,12 +432,29 @@ export default function MusicPlayer() {
       <div className="player-controls">
         <button type="button" className="player-icon" aria-label="Previous track" title="Previous track" disabled={tracks.length < 2} onClick={() => selectTrack((activeIndex - 1 + tracks.length) % tracks.length, Boolean(audio.current && !audio.current.paused))}><SkipBack size={16} /></button>
         <button type="button" className="play-button" aria-label={isPlaying ? 'Pause music' : needsResume ? 'Resume music' : 'Play music'} title={isPlaying ? 'Pause' : needsResume ? 'Resume' : 'Play'} disabled={!activeTrack} onClick={togglePlayback}>{isPlaying ? <Pause size={15} fill="currentColor" /> : <Play size={15} fill="currentColor" />}</button>
-        <button type="button" className="player-icon" aria-label="Next track" title="Next track" disabled={tracks.length < 2} onClick={() => selectTrack((activeIndex + 1) % tracks.length, Boolean(audio.current && !audio.current.paused))}><SkipForward size={16} /></button>
+        <button type="button" className="player-icon" aria-label="Stop music" title="Stop" disabled={!activeTrack} onClick={stopPlayback}><Square size={14} fill="currentColor" /></button>
+        <button type="button" className="player-icon" aria-label="Next track" title="Next track" disabled={tracks.length < 2} onClick={() => selectNextTrack(Boolean(audio.current && !audio.current.paused))}><SkipForward size={16} /></button>
+        <button type="button" className="player-icon shuffle-toggle" aria-label="Shuffle tracks" title="Shuffle tracks" aria-pressed={isShuffleEnabled} disabled={tracks.length < 2} onClick={() => setIsShuffleEnabled((enabled) => !enabled)}><Shuffle size={16} /></button>
       </div>
+      <label className="volume-control">
+        <Volume2 size={16} aria-hidden="true" />
+        <input
+          type="range"
+          min="0"
+          max="1"
+          step="0.05"
+          value={volume}
+          aria-label="Volume"
+          onChange={(event) => {
+            const nextVolume = Number(event.currentTarget.value);
+            setVolume(nextVolume);
+            if (audio.current) audio.current.volume = nextVolume;
+          }}
+        />
+      </label>
       <div className="player-progress" aria-label="Track progress">
         <span style={{ width: `${progress * 100}%` }} />
       </div>
-      <button type="button" className="player-icon library-toggle" aria-label="Manage playlist" title="Manage playlist" onClick={() => setIsOpen((open) => !open)}><ListMusic size={18} /></button>
       <span className="visually-hidden" role="status">{message || (needsResume ? 'Playback position restored. Press Play to resume.' : '')}</span>
     </div>
   );

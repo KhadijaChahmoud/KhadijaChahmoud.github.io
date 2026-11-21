@@ -26,6 +26,7 @@ import LanguageShowcase from './components/LanguageShowcase';
 import GitHubFollowButton from './components/GitHubFollowButton';
 import TimelineVideo from './components/TimelineVideo';
 import TimelinePage from './TimelinePage';
+import { PUBLIC_PLAYLIST } from './music/playlist';
 
 const ThreeBackground = lazy(() => import('./components/ThreeBackground'));
 
@@ -40,25 +41,30 @@ function EcoHeader({
   rightOpen,
   onToggleLeft,
   onToggleRight,
+  onCloseSidebars,
 }: {
   leftOpen: boolean;
   rightOpen: boolean;
   onToggleLeft: () => void;
   onToggleRight: () => void;
+  onCloseSidebars: () => void;
 }) {
   return (
-    <header className="eco-header">
+    <header className="eco-header" onClick={(event) => {
+      if (event.target instanceof Element && event.target.closest('button.toggle-button')) return;
+      onCloseSidebars();
+    }}>
       <div className="header-side">
         <button className="icon-button toggle-button" type="button" onClick={onToggleLeft} aria-label="Toggle navigation" aria-expanded={leftOpen} title="Toggle navigation (Ctrl+B)">
           {leftOpen ? <PanelLeftClose size={19} /> : <PanelLeftOpen size={19} />}
         </button>
-        <a className="brand" href="/" aria-label="ECO home"><span className="brand-mark">ECO</span><span className="brand-label">ECOSYSTEM</span></a>
+        <a className="brand" href="/" aria-label="Khadija Chahmoud home"><span className="brand-mark">ECO</span><span className="brand-label">Khadija Chahmoud</span></a>
         <nav className="header-nav" aria-label="Main navigation">
           <a href="/">Home</a>
           <a href="/about.html">About</a>
           <a href="/timeline.html">Timeline</a>
           <a href="/#languages">Languages</a>
-          <a href="/#listen">Listen</a>
+          <a href={PUBLIC_PLAYLIST.length ? '/#listen' : '/#listen-section'}>Listen</a>
         </nav>
       </div>
       <div className="header-side header-side-right">
@@ -85,7 +91,7 @@ function EcoLeftSidebar({ open, onClose }: { open: boolean; onClose: () => void 
             <a href="/about.html" className="sidebar-link"><Info size={18} /><span>About</span></a>
             <a href="/timeline.html" className="sidebar-link"><Clock3 size={18} /><span>Work timeline</span></a>
             <a href="/#languages" className="sidebar-link"><Code2 size={18} /><span>Languages &amp; starters</span></a>
-            <a href="/#listen" className="sidebar-link"><ListMusic size={18} /><span>Music library</span></a>
+            <a href={PUBLIC_PLAYLIST.length ? '/#listen' : '/#listen-section'} className="sidebar-link"><ListMusic size={18} /><span>Music library</span></a>
             <div className="sidebar-divider" />
             <a href={SOURCE_URL} className="sidebar-link" target="_blank" rel="noreferrer"><ArrowUpRight size={18} /><span>Portfolio source</span></a>
             <a href={PROFILE_URL} className="sidebar-link" target="_blank" rel="noreferrer"><Github size={18} /><span>GitHub profile</span></a>
@@ -126,7 +132,7 @@ function EcoRightSidebar({
           </section>
           <section className="settings-section">
             <h3>Your music</h3>
-            <a className="setting-action" href="/#listen"><AudioLines size={17} /><span>Open your music library</span><ChevronRight size={15} /></a>
+            <a className="setting-action" href={PUBLIC_PLAYLIST.length ? '/#listen' : '/#listen-section'}><AudioLines size={17} /><span>Open your music library</span><ChevronRight size={15} /></a>
             <p className="settings-note">Private tracks and saved links stay in this browser on this device. They are never uploaded by this site.</p>
           </section>
           <section className="settings-section">
@@ -217,24 +223,30 @@ function HomePage() {
       </section>
 
       <TimelineVideo />
-      <section className="content-section source-section">
+      <section className="content-section source-section" id="ecosystem-source">
         <div><span className="eyebrow">THE @ECO ECOSYSTEM</span><h2>Explore the ideas behind this site.</h2><p>This portfolio shares its architecture with the @eco ecosystem. Browse the project timeline and see the tools that inspired this digital space.</p></div>
         <a className="secondary-button" href="/timeline.html">Explore the ecosystem <ArrowUpRight size={15} /></a>
       </section>
 
       <LanguageShowcase />
 
-      <section className="content-section listen-section" aria-labelledby="listen-heading">
+      <section className="content-section listen-section" id="listen-section" aria-labelledby="listen-heading">
         <div className="listen-card">
           <span className="eyebrow">A LITTLE SPACE TO LISTEN</span>
           <h2 id="listen-heading">Press play. Make yourself at home.</h2>
-          <p>Add audio files from your device or save audio links in your private browser library. You can also add public tracks to the shared playlist in <code>src/music/playlist.ts</code>.</p>
-          <a className="primary-button" href="#listen">Open music player <AudioLines size={16} /></a>
-          <p className="privacy-caption">Your private library stays on this device. Playback resumes after you press Play again.</p>
+          {PUBLIC_PLAYLIST.length ? (
+            <>
+              <p>Add audio files from your device or save audio links in your private browser library. You can also add public tracks to the shared playlist in <code>src/music/playlist.ts</code>.</p>
+              <a className="primary-button" href="#listen">Open music player <AudioLines size={16} /></a>
+              <p className="privacy-caption">Your private library stays on this device. Playback resumes after you press Play again.</p>
+            </>
+          ) : (
+            <p>Add a track you have permission to publish to <code>src/music/playlist.ts</code>. The footer player will appear after the playlist is configured.</p>
+          )}
         </div>
       </section>
 
-      <section className="content-section source-section">
+      <section className="content-section source-section" id="contact-section">
         <div><span className="eyebrow">LET’S CONNECT</span><h2>Real stories start with a conversation.</h2><p>Have a brand to grow, an idea to explore, or a project that needs a human touch? I’d love to hear about it.</p></div>
         <a className="secondary-button" href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><Instagram size={17} /> Connect on Instagram <ArrowUpRight size={15} /></a>
       </section>
@@ -270,14 +282,14 @@ function AboutPage() {
   );
 }
 
-function EcoFooter() {
+function EcoFooter({ onCloseSidebars }: { onCloseSidebars: () => void }) {
   const [now, setNow] = useState(() => new Date());
   useEffect(() => {
     const timer = window.setInterval(() => setNow(new Date()), 30_000);
     return () => window.clearInterval(timer);
   }, []);
   return (
-    <footer className="eco-footer">
+    <footer className="eco-footer" onClick={onCloseSidebars}>
       <span className="footer-license">Built with @eco · © {now.getFullYear()} Khadija Chahmoud</span>
       <MusicPlayer />
       <a className="footer-github-link" href={REPOSITORIES_URL} target="_blank" rel="noreferrer" aria-label="View all GitHub repositories">
@@ -338,7 +350,13 @@ export default function App() {
 
   const toggleSidebar = (side: 'left' | 'right') => {
     const setter = side === 'left' ? setLeftOpen : setRightOpen;
+    (side === 'left' ? setRightOpen : setLeftOpen)(false);
     setter((open) => !open);
+  };
+
+  const closeSidebars = () => {
+    setLeftOpen(false);
+    setRightOpen(false);
   };
 
   const closeSidebar = (side: 'left' | 'right') => {
@@ -357,6 +375,7 @@ export default function App() {
           rightOpen={rightOpen}
           onToggleLeft={() => toggleSidebar('left')}
           onToggleRight={() => toggleSidebar('right')}
+          onCloseSidebars={closeSidebars}
         />
         <div className="main-container">
           <EcoLeftSidebar open={leftOpen} onClose={() => closeSidebar('left')} />
@@ -368,7 +387,7 @@ export default function App() {
             onToggleTheme={() => setTheme((current) => current === 'dark' ? 'light' : 'dark')}
           />
         </div>
-        <EcoFooter />
+        <EcoFooter onCloseSidebars={closeSidebars} />
       </div>
     </>
   );
