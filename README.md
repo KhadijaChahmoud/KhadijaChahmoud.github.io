@@ -25,7 +25,7 @@
 
 ## ✨ Welcome to my creative world
 
-I'm Khadija Chahmoud.
+I'm Khadija Chahmoud   .
 
 I believe that every brand has a story worth telling, every business has a personality worth discovering, and every meaningful connection starts with authenticity.
 
