@@ -257,6 +257,14 @@ function HomePage() {
         <div><span className="eyebrow">LET’S CONNECT</span><h2>Real stories start with a conversation.</h2><p>Have a brand to grow, an idea to explore, or a project that needs a human touch? I’d love to hear about it.</p></div>
         <a className="secondary-button" href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><Instagram size={17} /> Connect on Instagram <ArrowUpRight size={15} /></a>
       </section>
+
+      <section className="content-section source-section" id="family-spaces">
+        <div><span className="eyebrow">FAMILY CREATIVE SPACES</span><h2>Two more places for ideas to grow.</h2><p>Explore the family-supported creative pages, each with its own example projects and personality.</p></div>
+        <div className="hero-actions">
+          <a className="secondary-button" href="https://khadijadaughter.github.io/" target="_blank" rel="noreferrer">Creative Corner <ArrowUpRight size={15} /></a>
+          <a className="secondary-button" href="https://khadijason.github.io/" target="_blank" rel="noreferrer">Curiosity Lab <ArrowUpRight size={15} /></a>
+        </div>
+      </section>
     </main>
   );
 }

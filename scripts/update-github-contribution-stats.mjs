@@ -1,7 +1,7 @@
-const username = process.env.GITHUB_USERNAME || 'simoouahbiGHALINOA';
+const username = process.env.GITHUB_USERNAME || 'KhadijaChahmoud';
 const outputPath = process.env.GITHUB_OUTPUT_PATH
   ? new URL(process.env.GITHUB_OUTPUT_PATH, import.meta.url)
-  : new URL('../docs/assets/github-contribution-stats.svg', import.meta.url);
+  : new URL('../public/assets/github-contribution-stats.svg', import.meta.url);
 
 const token = process.env.GITHUB_PAT || process.env.GITHUB_TOKEN;
 if (!token) {

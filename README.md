@@ -180,4 +180,13 @@ that site's IndexedDB on the current device. Browsers with the File System
 Access API use its audio picker; other browsers keep the standard file picker.
 Push notifications need a backend and are not enabled yet.
 
+## Family creative spaces
+
+- [Creative Corner](https://khadijadaughter.github.io/) — example prompts for
+  stories, art, and imaginative projects.
+- [Curiosity Lab](https://khadijason.github.io/) — example prompts for
+  building, puzzles, and new discoveries.
+
+These are family-supported pages with parent-reviewed updates.
+
 <!-- Account verification: KhadijaChahmoud -->
