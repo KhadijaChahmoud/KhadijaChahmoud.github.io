@@ -261,8 +261,8 @@ function HomePage() {
       <section className="content-section source-section" id="family-spaces">
         <div><span className="eyebrow">FAMILY CREATIVE SPACES</span><h2>Two more places for ideas to grow.</h2><p>Explore the family-supported creative pages, each with its own example projects and personality.</p></div>
         <div className="hero-actions">
-          <a className="secondary-button" href="https://khadijadaughter.github.io/" target="_blank" rel="noreferrer">Creative Corner <ArrowUpRight size={15} /></a>
-          <a className="secondary-button" href="https://khadijason.github.io/" target="_blank" rel="noreferrer">Curiosity Lab <ArrowUpRight size={15} /></a>
+          <a className="secondary-button" href="https://khadijadaughter.github.io/" rel="noreferrer">Creative Corner <ArrowUpRight size={15} /></a>
+          <a className="secondary-button" href="https://khadijason.github.io/" rel="noreferrer">Curiosity Lab <ArrowUpRight size={15} /></a>
         </div>
       </section>
     </main>
