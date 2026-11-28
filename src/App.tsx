@@ -193,6 +193,7 @@ function HomePage() {
             <a className="primary-button" href="/about.html">Get to know me <ArrowUpRight size={16} /></a>
             <GitHubFollowButton />
             <a className="secondary-button" href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><Instagram size={16} /> Instagram</a>
+            <a className="secondary-button" href="#listen"><AudioLines size={16} /> Listen with me</a>
           </div>
           <p className="hero-caption">Real stories · genuine connection · meaningful content</p>
         </div>
