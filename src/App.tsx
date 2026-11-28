@@ -10,7 +10,6 @@ import {
   Github,
   House,
   Info,
-  Instagram,
   ListMusic,
   Moon,
   PanelLeftClose,
@@ -36,7 +35,6 @@ const ThreeBackground = lazy(() => import('./components/ThreeBackground'));
 
 const PROFILE_URL = 'https://github.com/KhadijaChahmoud';
 const REPOSITORIES_URL = 'https://github.com/KhadijaChahmoud?tab=repositories';
-const INSTAGRAM_URL = 'https://www.instagram.com/khadija.chahmoud/';
 const PROTECTED_USERS_URL = '/protectedUSERS_root_path_secure/';
 const SOURCE_URL = 'https://github.com/KhadijaChahmoud/KhadijaChahmoud.github.io';
 
@@ -99,7 +97,6 @@ function EcoLeftSidebar({ open, onClose }: { open: boolean; onClose: () => void 
             <div className="sidebar-divider" />
             <a href={SOURCE_URL} className="sidebar-link" target="_blank" rel="noreferrer"><ArrowUpRight size={18} /><span>Portfolio source</span></a>
             <a href={PROFILE_URL} className="sidebar-link" target="_blank" rel="noreferrer"><Github size={18} /><span>GitHub profile</span></a>
-            <a href={INSTAGRAM_URL} className="sidebar-link" target="_blank" rel="noreferrer"><Instagram size={18} /><span>Instagram</span></a>
             <a href={PROTECTED_USERS_URL} className="sidebar-link"><UserPlus size={18} /><span>Protected users</span></a>
           </nav>
           <p className="sidebar-footnote">A small public starting point for the @eco ecosystem.</p>
@@ -193,7 +190,6 @@ function HomePage() {
           <div className="hero-actions">
             <a className="primary-button" href="/about.html">Get to know me <ArrowUpRight size={16} /></a>
             <GitHubFollowButton />
-            <a className="secondary-button" href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><Instagram size={16} /> Instagram</a>
             <a className="secondary-button" href="#listen"><AudioLines size={16} /> Listen with me</a>
           </div>
           <p className="hero-caption">Real stories · genuine connection · meaningful content</p>
@@ -258,7 +254,6 @@ function HomePage() {
 
       <section className="content-section source-section" id="contact-section">
         <div><span className="eyebrow">LET’S CONNECT</span><h2>Real stories start with a conversation.</h2><p>Have a brand to grow, an idea to explore, or a project that needs a human touch? I’d love to hear about it.</p></div>
-        <a className="secondary-button" href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><Instagram size={17} /> Connect on Instagram <ArrowUpRight size={15} /></a>
       </section>
 
       <section className="content-section source-section" id="family-spaces">
@@ -280,7 +275,6 @@ function AboutPage() {
         <h1>Stories that make brands feel <span className="gradient-text">human.</span></h1>
         <p>I’m Khadija Chahmoud, a creative professional focused on content creation, social media management, and human-first brand storytelling. My perspective connects Dubai and Casablanca.</p>
         <div className="hero-actions">
-          <a className="primary-button" href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><Instagram size={16} /> Find me on Instagram</a>
           <a className="secondary-button" href={PROFILE_URL} target="_blank" rel="noreferrer"><Github size={16} /> GitHub <ArrowUpRight size={15} /></a>
         </div>
       </section>
@@ -294,7 +288,6 @@ function AboutPage() {
       </section>
       <section className="content-section source-section">
         <div><span className="eyebrow">BETWEEN DUBAI AND CASABLANCA</span><h2>Two places. A shared creative perspective.</h2><p>Dubai brings new perspectives and opportunity; Casablanca keeps me connected to home, local talent, and creative possibility.</p></div>
-        <a className="secondary-button" href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><Instagram size={17} /> Let’s connect <ArrowUpRight size={15} /></a>
       </section>
     </main>
   );
